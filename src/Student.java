@@ -5,6 +5,9 @@ public class Student implements Comparable<Student> {
 
     // TODO: Task 1 — Создай конструктор, который принимает имя, GPA и возраст
     public Student(String name, double gpa, int age) {
+        this.name = name;
+        this.gpa = gpa;
+        this.age = age;
         // заглушка
     }
 
@@ -14,6 +17,7 @@ public class Student implements Comparable<Student> {
 
     // TODO: Task 1 — Добавь возможность изменить GPA
     public void setGpa(double newGpa) {
+        this.gpa = newGpa;
         // заглушка
     }
 
@@ -21,12 +25,12 @@ public class Student implements Comparable<Student> {
     @Override
     public int compareTo(Student other) {
         // заглушка — верни правильное значение сравнения
-        return 0;
+        return Double.compare(this.gpa, other.gpa);
     }
 
     @Override
     public String toString() {
         // TODO: Сделай красивый вывод
-        return "";
+        return name+" (GPA : " +gpa;
     }
 }
